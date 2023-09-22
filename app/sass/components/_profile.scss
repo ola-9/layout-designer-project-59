@@ -1,0 +1,19 @@
+// Profile styles
+
+@import "../mixins/base_mixins";
+
+.profile-person {
+  @include py(16px);
+
+  margin-top: 64px;
+
+  &-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+  }
+
+  &-message {
+    color: $half-black;
+  }
+}

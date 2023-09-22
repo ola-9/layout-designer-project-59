@@ -1,0 +1,10 @@
+//- Avatars mixin
+
+mixin make_avatar(link, src, name, message, time)
+  a.d-flex.gap-4.person.py-4.ps-3.shadow-sm.text-decoration-none.pr-40.position-relative(href=link)
+    .person-l-padding.w-100.d-flex.flex-column.justify-content-center.text-overflow
+      img.avatar.position-absolute(src=src, alt='avatar')
+      .d-flex.justify-content-between.align-items-start
+        span.person-name.fw-bold= name
+        span.person-time.small= time
+      span.person-message.small.overflow-ellipsis.text-overflow= message

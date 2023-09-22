@@ -1,0 +1,14 @@
+//- Contacts list mixin
+
+mixin make_contacts(contacts_arr)
+  each people, letter in contacts_arr
+    .d-flex.flex-column.gap-3
+      span.text-muted= letter
+
+      each person in people
+        a.d-flex.gap-4.person.py-4.ps-3.shadow-sm.text-decoration-none.pr-40.position-relative(href='#')
+          - const path = ".";
+          .person-l-padding.w-100.d-flex.flex-column.justify-content-center.text-overflow
+            img.avatar.position-absolute(src= path + person.avatar, alt='avatar')
+            span.person-name.fw-bold= person.name
+            span.person-status.small= person.status

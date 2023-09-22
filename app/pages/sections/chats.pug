@@ -1,0 +1,17 @@
+//- include sections/chats.pug
+
+include ../mixins/mixins_avatar.pug
+
+- const chatsSecClass = (page === 'chat') ? 'show active' : '';
+
+section.chats.tab-pane.fade.pt-5.px-4(class=chatsSecClass, id='chats', role='tabpanel', aria-labelledby='nav-chats-tab')
+  h2.fw-bold.mb-4 Чаты
+
+  label.w-100
+    span.sr-only Message content
+    input.search-panel.px-4.py-4.w-100(type='search', id='search-messages', name='q', placeholder='Поиск по сообщениям')
+
+  .d-flex.flex-column.gap-3.my-5
+    +make_avatar('chat.html', './images/avatar_4.jpg', 'Вениамин Редакторович', 'o_O', '11:45')
+    +make_avatar('#', './images/avatar_2.jpg', 'Джедая Падаванов', 'Привет, скоро третий проект? Уже скоро надо будет выложить', '10:12')
+    +make_avatar('#', './images/avatar_3.jpg', 'Алексей Примадонин', 'Тесты упали >_<', '08:53')

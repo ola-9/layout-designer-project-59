@@ -1,0 +1,11 @@
+// Base project mixins
+
+@mixin px($padding: 0) {
+  padding-right: $padding;
+  padding-left: $padding;
+}
+
+@mixin py($padding: 0) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}

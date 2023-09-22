@@ -1,0 +1,16 @@
+//- include sections/contacts.pug
+
+include ../data/data-contacts.pug
+include ../mixins/mixins_contacts-list.pug
+
+- const contactsSecClass = (page === 'chat') ? '' : 'show active';
+
+section.tab-pane.fade.contacts.pt-5.px-4(class=contactsSecClass, id='contacts', role='tabpanel', aria-labelledby='nav-contacts-tab')
+  h2.fw-bold.mb-4 Контакты
+
+  label.w-100
+    span.sr-only Contact name
+    input.search-panel.px-4.py-4.w-100(type='search', id='search-contacts', name='q', placeholder='Поиск по контактам')
+
+  .d-flex.flex-column.gap-5.my-5
+    +make_contacts(contacts)

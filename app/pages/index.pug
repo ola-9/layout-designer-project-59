@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Main Page
+    link(rel='stylesheet' href='./styles/app.css')
+    link(rel="stylesheet", href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css')
+    script(src='js/bootstrap.min.js')
+
+  - const page = 'index';
+
+  body.h-100.p-0.bg-gray
+    .container.p-0
+      .row.mx-0.p-md-4.px-0
+        .col-md-4.col.p-0.d-flex.flex-md-column.flex-column-reverse.h-100vh
+          include sections/header.pug
+          div(id='nav-tab-content').left-side.y-scrolling.bg-white.border-right.tab-content
+            include sections/contacts.pug
+            include sections/chats.pug
+            include sections/profile.pug
+        .col-md-8.col-0.p-0
+          div.right-side.h-100.d-none.d-md-flex.align-items-center.justify-content-center.bg-white
+            include sections/right-side.pug

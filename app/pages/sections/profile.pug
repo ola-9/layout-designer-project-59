@@ -1,0 +1,36 @@
+//- include sections/profile.pug
+
+section.profile.tab-pane.fade.pt-5.px-4(id='profile', role='tabpanel', aria-labelledby='nav-profile-tab')
+  h2.fw-bold.mb-4 Профиль
+
+  label.w-100
+    span.sr-only Message name
+    input.search-panel.px-4.py-4.w-100(type='search', id='search-mesagges', name='q', placeholder='Поиск по сообщениям')
+
+  .profile-person.px-3.d-flex.flex-column.align-items-center.text-center.mb-5
+    img.profile-person-img.mb-2(src='./images/avatar_1.jpg', alt='profile image')
+    span.profile-person-name.fw-bold.mb-4 Кодовёнок Хекслетович
+    p.m-0.profile-person-message Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+
+  .profile-person-info.px-3
+    ul.list-group.list-group-flush
+      li.list-group-item.d-flex.py-2.px-3.align-items-center.justify-content-between.border-bottom
+        .d-flex.flex-column
+          span.opacity-50 Страна
+          span Москва, Россия
+        <i class="bi bi-globe text-black-50"></i>
+      li.list-group-item.d-flex.py-2.px-3.align-items-center.justify-content-between.border-bottom
+        .d-flex.flex-column
+          span.opacity-50 Телефон
+          span +7 (499) 123-45-67
+        <i class="bi bi-telephone text-black-50"></i>
+      li.list-group-item.d-flex.py-2.px-3.align-items-center.justify-content-between.border-bottom
+        .d-flex.flex-column
+          span.opacity-50 Email
+          span nikita.m@hexlet.io
+        <i class="bi bi-envelope text-black-50"></i>
+      li.list-group-item.d-flex.py-2.px-3.align-items-center.justify-content-between.border-bottom
+        .d-flex.flex-column
+          span.opacity-50 Twitter
+          span @n_mikhaylov
+        <i class="bi bi-people text-black-50"></i>

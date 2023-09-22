@@ -1,0 +1,78 @@
+// Project variables
+
+// Colors
+
+$gray: #EFEFEF;
+$light-gray: #ADB5BD;
+$primary: #4545A5;
+$dark-gray: #212529;
+$secondary: #6C757D;
+$light: #FBFBFB;
+$half-black: #808080;
+$theme-colors: (
+  "gray": #EFEFEF,
+  "primary": #4545A5,
+  "secondary": #6C757D,
+  "success": #28A745,
+  "info": #17A2B8,
+  "warning": #FFC107,
+  "danger": #DC3545,
+  "light": #FBFBFB,
+  "dark": #343A40,
+  "dark-gray": #212529,
+  "white": #FFF
+);
+
+// Grid breakpoints
+
+$grid-xs: 0;
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+$grid-xxl: 1600px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 2
+);
+
+// Content max-widths
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1540px
+);
+
+// Border properties
+
+$border-color: $gray;
+$border-radius: 1rem;
+
+// Mixins
+
+$enable-shadows: true;
+
+// Utilities
+
+$radiuses-value: 1rem;
+$borders-value: 1px solid #efefef;
+$fs-small-extra: 12.8px;

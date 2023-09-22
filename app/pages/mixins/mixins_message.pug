@@ -1,0 +1,17 @@
+//- Messages mixin
+
+mixin make_message(body, footer, name=null, path=null)
+  - var classes = name ? 'message p-4 shadow-sm' : 'message p-4 bg-primary';
+  .d-flex.chat-mobile-message
+    if path
+      img.chat-mobile-avatar.me-3.align-self-end.d-md-block.d-none(src=path, alt='profile icon')
+    .rounded-4.w-fit-content.chat-mobile-message-container.d-flex.flex-column(class=classes)
+      if name
+        .message-header
+          span.fw-bold= name
+      .message-body
+        - var bodyclr = name ? 'text-secondary' : 'text-light';
+        p.m-0(class=bodyclr)= body
+      .message-footer.mt-2.border-top.pt-1
+        - var footclr = name ? 'text-secondary' : 'text-gray';
+        span.small-extra(class=footclr)= footer

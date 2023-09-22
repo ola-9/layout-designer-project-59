@@ -1,0 +1,35 @@
+// Media Queries
+@import "../mixins/base_mixins";
+
+@media (min-width: $grid-md) {
+  .header {
+    border-top-left-radius: 16px;
+  }
+
+  .left-side {
+    border-bottom-left-radius: 16px;
+  }
+
+  .right-side {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .profile-person {
+    @include py(40px);
+
+    margin-top: 48px;
+  }
+
+  .chat-mobile {
+    &-input {
+      @include py(20px);
+    }
+
+    &-input-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+  }
+}

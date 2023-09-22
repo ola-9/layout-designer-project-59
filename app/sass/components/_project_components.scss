@@ -1,0 +1,61 @@
+// Project components
+@import "../mixins/contacts_mixins";
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  transform: translateX(calc(-50px - 24px));
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.y-scrolling {
+  height: 100%;
+
+  @include hide-scrollbar;
+}
+
+.person {
+  .person-name {
+    color: $dark-gray;
+  }
+
+  .person-status {
+    color: $secondary;
+  }
+
+  .person-time {
+    color: $light-gray;
+  }
+
+  .person-message {
+    color: $secondary;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary;
+
+    & .person__name {
+      color: $light;
+    }
+
+    & .person__status {
+      color: $gray;
+    }
+
+    & .person__message {
+      color: $light;
+    }
+
+    & .person__time {
+      color: $gray;
+    }
+  }
+}

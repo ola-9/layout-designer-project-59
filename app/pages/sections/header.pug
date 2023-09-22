@@ -1,0 +1,24 @@
+//- include sections/header.pug
+- const contactsClass = (page === 'chat') ? '' : 'active';
+- const chatsClass = (page === 'chat') ? 'active' : '';
+
+nav.nav.header.d-flex.align-items-center.py-3.ps-3.bg-primary.justify-content-between(id='navigation')
+  a.p-0(href='index.html')
+    img.header-logo(src='./images/icons/logo.svg', alt='logo')
+
+  .d-flex.align-items-center(role='tablist')
+    if page === 'chat'
+      a.nav-link.p-0.header-link.d-md-none.d-block.me-6(href='#current-chat', id='nav-dialog-tab', data-bs-toggle='tab', data-bs-target='#current-chat', type='button', role='tab', aria-controls='nav-dialog', aria-selected='false')
+        img.header-icon.inverted(src='./images/icons/chat-left-text.svg', alt='messages')
+
+    a.nav-link.p-0.header-link.p-0.d-flex.align-items-center(class=contactsClass, href='#contacts', id='nav-contacts-tab', data-bs-toggle='tab', data-bs-target='#contacts', type='button', role='tab', aria-controls='nav-contacts', aria-selected='true')
+      img.header-icon.inverted.me-md-2(src='./images/icons/people.svg', alt='icon')
+      span.text-light.small.m-0.d-md-block.d-none Контакты
+    
+    a.nav-link.p-0.header-link.p-0.mx-6.d-flex.align-items-center(class=chatsClass, href='#chats', id='nav-chats-tab', data-bs-toggle='tab', data-bs-target='#chats', type='button', role='tab', aria-controls='nav-chats', aria-selected='false')
+      img.header-icon.inverted.me-md-2(src='./images/icons/chat.svg', alt='icon')
+      span.text-light.small.m-0.d-md-block.d-none Сообщения
+
+    a.nav-link.p-0.header-link.p-0.d-flex.align-items-center(href='#profile', id='nav-profile-tab', data-bs-toggle='tab', data-bs-target='#profile', type='button', role='tab', aria-controls='nav-profile', aria-selected='false')
+      img.header-icon.inverted.me-md-2(src='./images/icons/person.svg', alt='icon')
+      span.text-light.small.m-0.d-md-block.d-none Профиль

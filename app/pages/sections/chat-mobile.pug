@@ -1,0 +1,22 @@
+//- include sections/chat-mobile.pug
+
+include ../mixins/mixins_message.pug
+
+.chat-mobile-container.d-flex.flex.flex-column.align-items-center.h-100vh.bg-white.radius-right-top.radius-right-bottom.w-100
+  .chat-mobile-header.align-self-start.w-100.position-sticky.bg-white.radius-right-top
+    a.d-flex.gap-4.person.py-4.ps-3.text-decoration-none.pr-40.position-relative.border-bottom.radius-right-top(href='#')
+      .person-l-padding.w-100.d-flex.flex-column.justify-content-center.text-overflow
+        img.avatar.position-absolute(src='./images/avatar_4.jpg', alt='avatar')
+        span.person-name.fw-bold Вениамин Редакторович
+        span.person-status.small Онлайн
+  .chat-mobile-messages.row-gap-3.d-flex.flex-column.p-5.w-100.align-items-start.bg-white.y-scrolling
+    +make_message('Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?', '8 минут назад', 'Вениамин Редакторович', './images/avatar_4.jpg')
+    +make_message('Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень', '8 минут назад', null, './images/avatar_1.jpg')
+    +make_message('Лады', '5 минут назад', 'Вениамин Редакторович', './images/avatar_4.jpg')
+    +make_message('А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие', '3 минуты назад', null, './images/avatar_1.jpg')
+    +make_message('о_О', 'Только что', 'Вениамин Редакторович', './images/avatar_4.jpg')
+  .chat-mobile-input-container.w-100.px-md-5.px-0.bg-white.radius-right-bottom
+    .chat-mobile-input.d-flex.justify-content-between.px-md-4.px-3.border-top
+      input.chat-mobile-input-field.w-100(type='text', name='input text', placeholder='Напишите сообщение...')
+      button.chat-mobile-input-button.bg-primary.p-0.ms-2
+        i.bi.bi-cursor.chat-mobile-input-icon.fs-4.text-white

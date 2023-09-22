@@ -1,0 +1,34 @@
+// Boootstrap related imports
+@import "../bootstrap/scss/functions";
+@import "./variables/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/utilities";
+@import "./utilities/user-utilities";
+@import "../bootstrap/scss/utilities/api";
+@import "../bootstrap/scss/bootstrap";
+
+// Reset styles
+
+@import "./reset/tabs-disable";
+@import "./reset/body-reset";
+
+// Mixins
+
+@import "./mixins/contacts_mixins";
+@import "./mixins/base_mixins";
+
+// Components
+
+@import "./components/profile";
+@import "./components/header";
+@import "./components/chat-mobile";
+@import "./components/right-side";
+@import "./components/media-queries";
+@import "./components/project_components";
+
+// Utilities
+
+@import "./utilities/base";
